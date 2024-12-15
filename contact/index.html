@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo"><i class="fa-solid fa-utensils"></i> King Restaurants</div>
+        <ul class="nav-links">
+            <li><a href="/home/home.html" class="nav-link">Home</a></li>
+            <li><a href="/items/items.html" class="nav-link">Menu</a></li>
+            <li><a href="/services/index.html" class="nav-link">Services</a></li>
+            <li><a href="/contact/index.html" class="nav-link">Contact</a></li>
+            <li><a href="/about/index.html" class="nav-link">About Us</a></li>
+        </ul>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const currentPath = window.location.pathname;
+                const navLinks = document.querySelectorAll('.nav-link');
+        
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        </script>
+    </nav>
+
+    <header class="hero-section" >
+        <h1>Contact</h1>
+        <br>
+        <h2 class="text-animation" style="font-style: italic;"></h2>
+        <br><br>
+    </header>
+
+    <div class="contact-cards">
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WhatsApp" class="card-icon">
+            <h2>Contact Us on WhatsApp</h2>
+            <p>Scan the QR code below or click the button to chat with us on WhatsApp.</p>
+            <a href="https://wa.me/qr/HKS2LQMA3KFDN1" target="_blank" class="card-button">Chat Now</a>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/youtube-play.png" alt="YouTube" class="card-icon">
+            <h2>Subscribe to our YouTube Channel</h2>
+            <p>Click the button below to subscribe to our YouTube channel.</p>
+            <a href="https://youtube.com/channel/your_channel" target="_blank" class="card-button youtube">Subscribe</a>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/tiktok.png" alt="TikTok" class="card-icon">
+            <h2>Follow us on TikTok</h2>
+            <p>Click the button below to follow us on TikTok.</p>
+            <a href="https://www.tiktok.com/@codepodda?lang=en" target="_blank" class="card-button tiktok">Follow</a>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram" class="card-icon">
+            <h2>Follow us on Instagram</h2>
+            <p>Click the button below to follow us on Instagram.</p>
+            <a href="https://instagram.com/your_username" target="_blank" class="card-button instagram">Follow</a>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/facebook-new.png" alt="Facebook" class="card-icon">
+            <h2>Like our Facebook Page</h2>
+            <p>Click the button below to like our Facebook page.</p>
+            <a href="https://facebook.com/your_page" target="_blank" class="card-button facebook">Like</a>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/telegram-app.png" alt="Telegram" class="card-icon">
+            <h2>Join us on Telegram</h2>
+            <p>Click the button below to join our Telegram channel.</p>
+            <a href="https://t.me/your_channel" target="_blank" class="card-button telegram">Join Now</a>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WhatsApp" class="card-icon">
+            <h2>Call Us on WhatsApp</h2>
+            <p>Click the button below to make a voice call with us on WhatsApp.</p>
+            <a href="https://wa.me/your_number?call" target="_blank" class="card-button">Voice Call</a>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/viber.png" alt="Viber" class="card-icon">
+            <h2>Chat with us on Viber</h2>
+            <p>Click the button below to chat with us on Viber.</p>
+            <a href="viber://chat?number=your_number" target="_blank" class="card-button viber">Chat Now</a>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/color/96/000000/facebook-messenger.png" alt="Messenger" class="card-icon">
+            <h2>Message us on Messenger</h2>
+            <p>Click the button below to message us on Messenger.</p>
+            <a href="https://m.me/your_page" target="_blank" class="card-button messenger">Message Now</a>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

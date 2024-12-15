@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Example</title>
+    <link rel="stylesheet" href="/items/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- <header>
+        <nav>
+            <ul>
+                <li><a href="/home/home.html">Home</a></li>
+                <li><a href="/about/about.html">About</a></li>
+                <li><a href="/order/order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+
+    <nav class="navbar">
+        <div class="nav-logo"><i class="fa-solid fa-utensils"></i> King Restaurants</div>
+        <ul class="nav-links">
+            <li><a href="/home/home.html" class="nav-link">Home</a></li>
+            <li><a href="/items/items.html" class="nav-link">Menu</a></li>
+            <li><a href="/services/index.html" class="nav-link">Services</a></li>
+            <li><a href="/contact/index.html" class="nav-link">Contact</a></li>
+            <li><a href="/about/index.html" class="nav-link">About Us</a></li>
+        </ul>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const currentPath = window.location.pathname;
+                const navLinks = document.querySelectorAll('.nav-link');
+        
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        </script>
+    </nav>
+
+    <header class="hero-section">
+        <h1>Menu</h1>
+        <h2 class="text-animation" ></h2>
+        <br><br>
+    </header>
+    
+
+    <main style="margin-top: 50px;">
+
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card" id="barger">
+                <img src="/Assets/bargar.jpeg" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Barger</h2>
+                    <p class="card-price">Price: $1.30</p>
+                    <p class="card-special-price">Today's Special Price: $1.10</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-barger" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('barger')">Submit Comment</button>
+                        <button onclick="orderNow('barger')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+
+        <div class="card-container">
+            <!-- Card 2 -->
+            <div class="card" id="hoppers">
+                <img src="/Assets/hoppers.jpg" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Egg Hoppers</h2>
+                    <p class="card-price">Price: $0.90</p>
+                    <p class="card-special-price">Today's Special Price: $0.80</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-hoppers" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('hoppers')">Submit Comment</button>
+                        <button onclick="orderNow('hoppers')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+
+        <div class="card-container">
+            <!-- Card 3 -->
+            <div class="card" id="kottgu">
+                <img src="/Assets/kottgu.jpg" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Kottgu</h2>
+                    <p class="card-price">Price: $5.00</p>
+                    <p class="card-special-price">Today's Special Price: $4.60</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-kottgu" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('kottgu')">Submit Comment</button>
+                        <button onclick="orderNow('kottgu')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+
+        <div class="card-container">
+            <!-- Card 4 -->
+            <div class="card" id="noodles">
+                <img src="/Assets/noodles.webp" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Noodles</h2>
+                    <p class="card-price">Price: $3.50</p>
+                    <p class="card-special-price">Today's Special Price: $3.10</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-noodles" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('noodles')">Submit Comment</button>
+                        <button onclick="orderNow('noodles')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+
+        <div class="card-container">
+            <!-- Card 5 -->
+            <div class="card" id="parata">
+                <img src="/Assets/parata.avif" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Parata</h2>
+                    <p class="card-price">Price: $0.50</p>
+                    <p class="card-special-price">Today's Special Price: $0.45</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-parata" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('parata')">Submit Comment</button>
+                        <button onclick="orderNow('parata')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+
+        <div class="card-container">
+            <!-- Card 6 -->
+            <div class="card" id="pasta">
+                <img src="/Assets/pasta.jpg" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Pasta</h2>
+                    <p class="card-price">Price: $5.30</p>
+                    <p class="card-special-price">Today's Special Price: $5.10</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-pasta" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('pasta')">Submit Comment</button>
+                        <button onclick="orderNow('pasta')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+
+        <div class="card-container">
+            <!-- Card 7 -->
+            <div class="card" id="pittza">
+                <img src="/Assets/pittza.jpeg" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Pittza</h2>
+                    <p class="card-price">Price: $10.00</p>
+                    <p class="card-special-price">Today's Special Price: $8.00</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-pittza" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('pittza')">Submit Comment</button>
+                        <button onclick="orderNow('pittza')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+        <div class="card-container">
+            <!-- Card 8 -->
+            <div class="card" id="curry">
+                <img src="/Assets/rice and curry.jpeg" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Rice and Curry</h2>
+                    <p class="card-price">Price: $7.30</p>
+                    <p class="card-special-price">Today's Special Price: $7.00</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-curry" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('curry')">Submit Comment</button>
+                        <button onclick="orderNow('curry')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+        <div class="card-container">
+            <!-- Card 9 -->
+            <div class="card" id="rice">
+                <img src="/Assets/rice.jpg" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Rice</h2>
+                    <p class="card-price">Price: $10.00</p>
+                    <p class="card-special-price">Today's Special Price: $9.50</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-rice" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('rice')">Submit Comment</button>
+                        <button onclick="orderNow('rice')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+        <div class="card-container">
+            <!-- Card 10 -->
+            <div class="card" id="sabmarin">
+                <img src="/Assets/sabmarin.jpeg" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">sabmarin</h2>
+                    <p class="card-price">Price: $1.50</p>
+                    <p class="card-special-price">Today's Special Price: $1.40</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-sabmarin" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('sabmarin')">Submit Comment</button>
+                        <button onclick="orderNow('sabmarin')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+        <div class="card-container">
+            <!-- Card 11 -->
+            <div class="card" id="string">
+                <img src="/Assets/string hoppers.jpeg" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">String Hoppers</h2>
+                    <p class="card-price">Price: $4.20</p>
+                    <p class="card-special-price">Today's Special Price: $3.80</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-string" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('string')">Submit Comment</button>
+                        <button onclick="orderNow('string')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+
+        <div class="card-container">
+            <!-- Card 12 -->
+            <div class="card" id="those">
+                <img src="/Assets/ythose.jpeg" alt="Meal Image" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Those</h2>
+                    <p class="card-price">Price: $1.20</p>
+                    <p class="card-special-price">Today's Special Price: $0.90</p>
+                    <div class="card-reviews">
+                        <p><strong>Reviews:</strong></p>
+                        <p>"Delicious meal!" - Jane Doe</p>
+                        <p>"Great value for money." - John Smith</p>
+                    </div>
+                    <div class="card-comments">
+                        <h3>Comments</h3>
+                        <textarea id="comment-those" placeholder="Add your comment..."></textarea>
+                        <button onclick="submitComment('those')">Submit Comment</button>
+                        <button onclick="orderNow('those')">Order Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional cards go here... -->
+        </div>
+        
+        
+
+    </main>
+
+    <!-- <footer>
+        <p>Contact us: +94 770 280 529 | dananjayaruwan0.com</p>
+    </footer> -->
+
+    <div id="alert-box" class="alert-box">
+        <div class="alert-content">
+            <p id="alert-message">Order Successful</p>
+            <button onclick="closeAlert()">Close</button>
+        </div>
+    </div>
+
+    <div id="order-card" class="order-card">
+        <h2>Order Confirmation</h2>
+        <p id="order-product">Product: <span id="order-product-name"></span></p>
+        <p id="order-price">Price: $<span id="order-price-value"></span></p>
+        <p id="order-special-price">Special Price: $<span id="order-special-price-value"></span></p>
+        <p>Quantity: <input type="number" id="order-quantity" min="1" value="1"></p>
+        <p>Total: $<span id="order-total"></span></p>
+        <div class="order-payment">
+            <label>
+                <i class="fa-brands fa-cc-visa"></i> Visa     <input type="radio" name="payment-method" value="visa"> 
+            </label>
+            <label>
+                <i class="fa-brands fa-cc-mastercard"> </i>  Master<input type="radio" name="payment-method" value="mastercard"> 
+            </label>
+            <label>
+                <i class="fa-solid fa-wallet"></i> Cash      <input type="radio" name="payment-method" value="cash"> 
+            </label>
+        </div>
+        <div class="order-buttons">
+            <button id="confirm-order">Confirm Order</button>
+            <button id="cancel-order">Cancel</button>
+        </div>
+    </div>
+    
+
+    <script src="/items/index.js"></script>
+</body>
+</html>

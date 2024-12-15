@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #007bff;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+    font-weight: 600;
+   
+}
+
+.nav-logo {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    background-color: #0056b3;
+    border-radius: 4px;
+}
+
+.hero-section {
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: px;
+}
+
+.hero-section h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+
+.text-animation {
+    font-style: italic;
+    font-size: 24px;
+    /* color: #1b1919; */
+    color: black;
+    text-align: center;
+    animation: fadeIn 4s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+
+
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f2f5;
+    
+}
+
+.card {
+    
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    
+}
+
+.card img.card-icon {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.card img.qr-code {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #1ebe57;
+}
+
+/* Different colors for different platforms */
+.card-button.youtube {
+    background-color: #FF0000;
+}
+
+.card-button.youtube:hover {
+    background-color: #CC0000;
+}
+
+.card-button.tiktok {
+    background-color: #010101;
+}
+
+.card-button.tiktok:hover {
+    background-color: #282828;
+}
+
+.card-button.instagram {
+    background-color: #C13584;
+}
+
+.card-button.instagram:hover {
+    background-color: #A32E70;
+}
+
+.card-button.facebook {
+    background-color: #3b5998;
+}
+
+.card-button.facebook:hover {
+    background-color: #2d4373;
+}
+
+.card-button.telegram {
+    background-color: #0088cc;
+}
+
+.card-button.telegram:hover {
+    background-color: #006699;
+}
+
+.card-button.viber {
+    background-color: #665cac;
+}
+
+.card-button.viber:hover {
+    background-color: #4c469c;
+}
+
+.card-button.messenger {
+    background-color: #0084ff;
+}
+
+.card-button.messenger:hover {
+    background-color: #006db3;
+}
+
+
+
+
+
+.nav-links .active {
+    text-decoration: underline;
+    text-decoration-color:white;
+    text-underline-offset: 10px; /* Adjust the distance between text and underline */
+}

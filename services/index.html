@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar Example</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo"><i class="fa-solid fa-utensils"></i> King Restaurants</div>
+        <ul class="nav-links">
+            <li><a href="/home/home.html" class="nav-link">Home</a></li>
+            <li><a href="/items/items.html" class="nav-link">Menu</a></li>
+            <li><a href="/services/index.html" class="nav-link">Services</a></li>
+            <li><a href="/contact/index.html" class="nav-link">Contact</a></li>
+            <li><a href="/about/index.html" class="nav-link">About Us</a></li>
+        </ul>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const currentPath = window.location.pathname;
+                const navLinks = document.querySelectorAll('.nav-link');
+        
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        </script>
+        
+    </nav>
+
+    <header class="hero-section">
+        <h1>Our Services</h1>
+        <h2 class="text-animation"></h2>
+    </header>
+    <section class="services">
+        <div class="service-card">
+            <img src="/Assets/Fine Dining.jpg" alt="Service 1">
+            <h2>Fine Dining</h2>
+            <p>Enjoy an exquisite dining experience with gourmet dishes crafted by our top chefs.</p>
+        </div>
+        <div class="service-card">
+            <img src="/Assets/Private Events.jpeg" alt="Service 2">
+            <h2>Private Events</h2>
+            <p>Host your special occasions with elegance in our exclusive event spaces.</p>
+        </div>
+        <div class="service-card">
+            <img src="/Assets/Delivery Service.jpg" alt="Service 3">
+            <h2>Delivery Service</h2>
+            <p>Order your favorite meals and have them delivered to your doorstep with our efficient delivery service.</p>
+        </div>
+        <div class="service-card">
+            <img src="/Assets/Catering.jpeg" alt="Service 4">
+            <h2>Catering</h2>
+            <p>We provide catering services for all types of events, ensuring a memorable experience for you and your guests.</p>
+        </div>
+    </section>
+
+    
+
+    <script src="index.js"></script>
+</body>
+</html>

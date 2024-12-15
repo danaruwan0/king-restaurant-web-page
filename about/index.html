@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo"><i class="fa-solid fa-utensils"></i> King Restaurants</div>
+        <ul class="nav-links">
+            <li><a href="/home/home.html" class="nav-link">Home</a></li>
+            <li><a href="/items/items.html" class="nav-link">Menu</a></li>
+            <li><a href="/services/index.html" class="nav-link">Services</a></li>
+            <li><a href="/contact/index.html" class="nav-link">Contact</a></li>
+            <li><a href="/about/index.html" class="nav-link">About Us</a></li>
+        </ul>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const currentPath = window.location.pathname;
+                const navLinks = document.querySelectorAll('.nav-link');
+        
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        </script>
+    </nav>
+
+    <div style="background: rgba(0, 0, 0, 0.5);">
+        <div class="video-container">
+            <video src="/Assets/about vidio.mp4" class="bg-video" autoplay muted loop></video>
+        </div>
+    
+        <header class="hero-section">
+            <h1>About Us</h1>
+            <h2 class="text-animation"> </h2>
+        </header>
+    
+        <section class="about-section">
+            <div class="container">
+                
+                <h2>Our Story</h2>
+                <p style=" font-weight: bold;">At King Restaurants, we pride ourselves on delivering an exceptional dining experience. Our journey began with a passion for culinary excellence and a desire to bring people together over delicious food.</p>
+                <hr>
+                <br><br>
+
+                <h2>Our Mission</h2>
+                <p style=" font-weight: bold;">Our mission is to provide top-quality food and outstanding service to every guest. We aim to create memorable experiences by offering a diverse menu, using fresh ingredients, and maintaining a welcoming atmosphere.</p>
+                <hr>
+                <br><br>
+
+                <h2>Our Values</h2>
+                <ul style=" font-weight: bold;">
+                    <li><strong>Quality:</strong> We are committed to using the finest ingredients and maintaining high standards in all aspects of our restaurant.</li>
+                    <br>
+                    <li><strong>Customer Service:</strong> Our team is dedicated to providing excellent service and ensuring that every guest feels valued and satisfied.</li>
+                    
+                    <li><strong>Innovation:</strong> We continuously strive to innovate and offer new and exciting dishes to delight our customers.</li>
+                </ul>
+                <hr>
+                <br><br>
+            </div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
